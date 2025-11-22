@@ -13,6 +13,7 @@ function App() {
     const [cart, setCart] = useState(initialCart);
 
     const MAX_ITEMS = 5;
+    const MIN_ITEMS = 1;
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -58,7 +59,7 @@ function App() {
 
     function decreaseQuantity(id) {
         const updatedCart = cart.map(item => {
-            if (item.id === id && item.quantity > 1) {
+            if (item.id === id && item.quantity > MIN_ITEMS) {
                 return {
                     ...item,
                     quantity: item.quantity - 1
