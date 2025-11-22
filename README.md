@@ -1,16 +1,98 @@
-# React + Vite
+# 🎸 GuitarLA - React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of the **React & TypeScript – La Guía Completa** course by **Juan de la Torre (Udemy)**.  
+It’s a single-page React application that simulates an online guitar store. The goal of this project is to practice **state management**, **component structure**, and **performance optimization** using core React hooks such as `useState`, `useEffect`, and `useMemo`.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Dynamic product rendering:** Displays a list of guitars loaded from a data file.
+- **Shopping cart system:** Allows users to add guitars to the cart with quantity and price tracking.
+- **Cart management:** Users can increase, decrease, or remove items directly from the cart.
+- **Live total calculation:** The cart’s total updates automatically based on the selected items.
+- **Optimized performance:** Uses `useMemo` to prevent unnecessary recalculations.
+- **Component-based UI:** Built entirely with modular React components.
+- **Bootstrap styling:** The layout and styling are based on pre-provided HTML and Bootstrap CSS from the course.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🧠 Key Concepts Practiced
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React hooks: `useState`, `useEffect`, `useMemo`
+- Component communication via props
+- Functional state updates
+- Conditional rendering
+- Array manipulation and mapping
+- Event handling in React
+- Code organization and modular design
+
+---
+
+## 🛠️ Technologies Used
+
+- **React 18**
+- **Vite**
+- **JavaScript (ES6+)**
+- **Bootstrap**
+- **HTML & CSS (provided by the course)**
+
+---
+
+## 🧩 Project Structure
+
+```
+GuitarLA/
+├── src/
+│   ├── components/
+│   ├── data/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/guitarla-react.git
+   ```
+2. Navigate into the project folder:
+   ```bash
+   cd guitarla-react
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+The app will be available at **http://localhost:5173**
+
+---
+
+## 📸 Preview
+
+_![App preview](./src/assets/preview.png)_
+
+---
+
+## 📚 Credits
+
+This project was created as part of the **React & TypeScript Course by [Juan de la Torre](https://www.udemy.com/user/juanpablodelatorrevaldez/)**  
+Customized and adapted by **Lorelvis Santos** for learning purposes.
+
+---
+
+## 📝 License
+
+This project is for educational purposes only and is **not intended for commercial use**.
