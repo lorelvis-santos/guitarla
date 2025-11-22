@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-function Header({ cart, removeFromCart }) {
+function Header({ cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart }) {
     // useMemo -> se ejecuta cuando uno de los elementos del array de dependencias cambia
     const isEmpty = useMemo(() => cart.length === 0, [cart])
     const cartTotal = useMemo(() => cart.reduce((total, item) => total + (item.quantity * item.price), 0), [cart]);
@@ -54,6 +54,7 @@ function Header({ cart, removeFromCart }) {
                                                                 <button
                                                                     type="button"
                                                                     className="btn btn-dark"
+                                                                    onClick={() => decreaseQuantity(guitar.id)}
                                                                 >
                                                                     -
                                                                 </button>
@@ -61,6 +62,7 @@ function Header({ cart, removeFromCart }) {
                                                                 <button
                                                                     type="button"
                                                                     className="btn btn-dark"
+                                                                    onClick={() => increaseQuantity(guitar.id)}
                                                                 >
                                                                     +
                                                                 </button>
@@ -81,7 +83,12 @@ function Header({ cart, removeFromCart }) {
                                             </table>
 
                                             <p className="text-end">Total pagar: <span className="fw-bold">${cartTotal}</span></p>
-                                            <button className="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
+                                            <button
+                                                className="btn btn-dark w-100 mt-3 p-2"
+                                                onClick={clearCart}
+                                            >
+                                                Vaciar Carrito
+                                            </button>
                                         </>
                                     )
                                 }
