@@ -61,7 +61,7 @@ GuitarLA/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/guitarla-react.git
+   git clone https://github.com/lorelvis-santos/guitarla-react.git
    ```
 2. Navigate into the project folder:
    ```bash
